@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header')%>
+</head>
+
+<body>
+  <%- include('partials/navbar')%>
+<h3>Signup</h3>
+  <form action="/signup" method="post">
+    <input type="text" id="name" name="name" placeholder="Name"><br>
+    <input type="text" id="age" name="age" placeholder="Age"><br>
+    <input type="text" id="phone" name="phone" placeholder="Phone"><br>
+    <input type="submit" value="Signup">
+  </form>
+  <h3>Login</h3>
+  <form action="/login" method="post">
+    <input type="text" id="name" name="name" placeholder="Name"><br>
+    <input type="text" id="age" name="age" placeholder="Age"><br>
+    <input type="submit" value="Login">
+  </form>
+
+</body>
+</html>

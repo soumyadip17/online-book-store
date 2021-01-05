@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header')%>
+</head>
+
+<body>
+  <%- include('partials/navbar')%>
+  <%if(mathematics.length>0){%>
+  <%for(const math of mathematics){%>
+    <a href="/<%=math.subject%>/<%=math.name%>/<%=math.id%>"><%=math.name%><br></a>
+  <%}}%>
+<%if(physics.length>0){%>
+  <%for(const phy of physics){%>
+    <a href="/<%=phy.subject%>/<%=phy.name%>/<%=phy.id%>"><%=phy.name%><br></a>
+  <%}}%>
+  <%if(chemistry.length>0){%>
+  <%for(const che of chemistry){%>
+    <a href="/<%=che.subject%>/<%=che.name%>/<%=che.id%>"><%=che.name%><br></a>
+  <%}}%>
+
+  
+  
+
+</body>
+</html>
+

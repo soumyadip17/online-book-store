@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header')%>
+</head>
+
+<body>
+	<h3>Your cart</h3>
+	<%- include('partials/navbar')%>
+	<%for(const item of cart){%>
+		<a href="/<%=item.subject%>/<%=item.name%>/<%=item.bookid%>"><%= item.name%></a>
+		<form method="POST" action="/<%=item.subject%>/<%=item.name%>/<%=item.bookid%>/cart/delete?_method=DELETE">
+			<button>Delete</button>
+		</form>
+	<%}%>
+	<br>
+	<a href="/">Continue shopping</a>
+</body>
+
+</html>

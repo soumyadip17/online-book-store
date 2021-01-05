@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header')%>
+</head>
+
+<body>
+  <%- include('partials/navbar')%>
+  <p>Here is your <%= book.name %> of <%= book.subject %></p><br>
+  <a href="/<%=book.subject%>/<%=book.name%>/<%=book.id%>/cart">Add to cart</a>
+</body>
+</html>
+

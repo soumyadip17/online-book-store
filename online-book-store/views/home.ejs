@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header')%>
+</head>
+
+<body>
+  <%- include('partials/navbar')%>
+  
+  <%if(login==true){%>
+  <h3>Welcome <%= user.name %> of age<%= user.age %></h3>
+  <form method="POST" action="/">
+    <button>Logout</button>
+  </form>
+  <%}else{%>
+  <a href="/register">Signup</a>
+  <a href="/register">Login</a>
+  <%}%>
+  <br>
+  <%for(const book of books){%>
+    <a href="/<%=book.subject%>/<%=book.name%>/<%=book.id%>"><%=book.name%><br></a>
+  <%}%>
+</body>
+</html>
+
